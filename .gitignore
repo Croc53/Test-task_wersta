@@ -1,0 +1,16 @@
+bin/
+obj/
+*.user
+*.suo
+
+.vs/
+*.userosscache
+*.sln.docstates
+
+[Tt]est[Rr]esult*/
+*.trx
+
+publish/
+*.pubxml
+
+

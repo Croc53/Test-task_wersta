@@ -1,0 +1,36 @@
+﻿@model TestTaskWersta.Models.Order
+
+@{
+    ViewData["Title"] = "Заказ " + Model.OrderNumber;
+}
+
+<h1>Заказ @Model.OrderNumber</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <dl class="row">
+            <dt class="col-sm-4">Номер заказа</dt>
+            <dd class="col-sm-8">@Model.OrderNumber</dd>
+
+            <dt class="col-sm-4">Город отправителя</dt>
+            <dd class="col-sm-8">@Model.SenderCity</dd>
+
+            <dt class="col-sm-4">Адрес отправителя</dt>
+            <dd class="col-sm-8">@Model.SenderAddress</dd>
+
+            <dt class="col-sm-4">Город получателя</dt>
+            <dd class="col-sm-8">@Model.RecipientCity</dd>
+
+            <dt class="col-sm-4">Адрес получателя</dt>
+            <dd class="col-sm-8">@Model.RecipientAddress</dd>
+
+            <dt class="col-sm-4">Вес груза</dt>
+            <dd class="col-sm-8">@Model.Weight кг</dd>
+
+            <dt class="col-sm-4">Дата забора груза</dt>
+            <dd class="col-sm-8">@Model.PickupDate.ToString("dd.MM.yyyy")</dd>
+        </dl>
+
+        <a asp-action="Index" class="btn btn-secondary">Назад к списку</a>
+    </div>
+</div>
